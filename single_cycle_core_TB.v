@@ -6,7 +6,7 @@ module single_cycle_core_Test_Bench();
     wire [15:0] led;
 
     initial begin
-        switches=16'b1000_1100_1110_1111;
+        switches=1;
         clk=0;
         reset=0;
         #10
@@ -18,5 +18,5 @@ module single_cycle_core_Test_Bench();
     always #2 clk=~clk;
 
 
-    single_cycle_core_v single_cycle_core_inst(.clk(clk), .reset(reset), .switches(switches), .led(led));
+    single_cycle_core_v single_cycle_core_inst(.clk(clk), .reset(reset), .sw(switches), .led(led));
 endmodule
