@@ -289,7 +289,7 @@ module single_cycle_core_v(input clk, input reset, input[15:0] sw, output [15:0]
         .clk(clk), .reset(reset),
 
         .reg_a_EX(sig_insn_EX[11:8]), .data_a_EX(sig_read_data_a_EX),
-        .reg_b_EX(sig_insn_EX[7:4]), .data_b_EX(sig_read_data_a_EX),
+        .reg_b_EX(sig_insn_EX[7:4]), .data_b_EX(sig_read_data_b_EX),
 
         .result_MEM(sig_alu_result_MEM),
         .write_register_MEM(sig_write_register_MEM),

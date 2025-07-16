@@ -42,7 +42,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module program_counter(input reset, input clk, input[3:0] addr_in, output reg[3:0] addr_out);
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         if (reset == 1) begin
             addr_out <= 0;
         end else begin

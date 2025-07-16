@@ -51,7 +51,7 @@ module data_memory(
     
     always @(negedge clk) begin
         if (reset) begin
-            data_array[0] <= 16'h0001; // 1
+            data_array[0] <= 16'h000F; // 1
             data_array[1] <= 16'hFFFF; // -1
             data_array[2] <= 16'h0000;
             data_array[3] <= 16'h0000;
