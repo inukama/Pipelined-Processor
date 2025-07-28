@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.123 (w)1999-2025 BSI
+[*] Mon Jul 28 05:15:51 2025
+[*]
+[dumpfile] "/home/kommy/projects/hardware/single_cycle_core/Verilog/cpu_testbench.vcd"
+[dumpfile_mtime] "Mon Jul 28 05:14:21 2025"
+[dumpfile_size] 645817
+[savefile] "/home/kommy/projects/hardware/single_cycle_core/Verilog/view.gtkw"
+[timestart] 0
+[size] 1916 970
+[pos] -1 -1
+*-14.100000 38000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] cpu_toplevel.single_cycle_core_inst.
+[treeopen] single_cycle_core_Test_Bench.
+[treeopen] single_cycle_core_Test_Bench.single_cycle_core_inst.
+[sst_width] 290
+[signals_width] 342
+[sst_expanded] 1
+[sst_vpaned_height] 499
+@28
+single_cycle_core_Test_Bench.clk
+single_cycle_core_Test_Bench.single_cycle_core_inst.reset
+@24
+single_cycle_core_Test_Bench.single_cycle_core_inst.led[15:0]
+@200
+-Current instruction at different stages
+@22
+single_cycle_core_Test_Bench.single_cycle_core_inst.sig_insn_IF[15:0]
+@23
+single_cycle_core_Test_Bench.single_cycle_core_inst.sig_insn_unstalled_ID[15:0]
+@22
+single_cycle_core_Test_Bench.single_cycle_core_inst.sig_insn_ID[15:0]
+single_cycle_core_Test_Bench.single_cycle_core_inst.sig_insn_EX[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

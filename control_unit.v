@@ -78,11 +78,11 @@ module control_unit(
     localparam OP_BEQ = 4'b1111; // F
     localparam OP_SHOW = 4'b1110; // E
     
-    assign reg_dst = (opcode == OP_ADD);
+    assign reg_dst = (opcode == OP_ADD); // If instruction is r-type
     assign reg_write = (opcode == OP_ADD || opcode == OP_LOAD || opcode == OP_SHOW || opcode == OP_LOADSWITCH);
     assign alu_src = (opcode == OP_LOAD || opcode == OP_STORE || opcode == OP_SHOW);
     assign mem_write = (opcode == OP_STORE);
-    assign mem_to_reg = (opcode == OP_LOAD || opcode == OP_SHOW || opcode == OP_LOADSWITCH);
+    assign mem_to_reg = (opcode == OP_LOAD || opcode == OP_SHOW);
     assign branch = (opcode == OP_BEQ);
     assign show = (opcode == OP_SHOW);
     assign switch_input = (opcode == OP_LOADSWITCH);

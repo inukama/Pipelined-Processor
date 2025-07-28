@@ -41,12 +41,17 @@
     
 //////////////////////////////////////////////////////////////////////////////////
 
-module program_counter(input reset, input clk, input[3:0] addr_in, output reg[3:0] addr_out);
+module program_counter(input reset, input clk, input hold, input[3:0] addr_in, output reg[3:0] addr_out);
+    reg stalled;
+
     always @(negedge clk) begin
         if (reset == 1) begin
             addr_out <= 0;
+        end else if (hold) begin
+            addr_out <= addr_out;
         end else begin
             addr_out <= addr_in;
         end
     end
+
 endmodule

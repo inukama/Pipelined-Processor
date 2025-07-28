@@ -6,13 +6,17 @@ module single_cycle_core_Test_Bench();
     wire [15:0] led;
 
     initial begin
-        switches=1;
+        $dumpfile("cpu_testbench.vcd");
+        $dumpvars(0);
+        switches=5;
         clk=0;
         reset=0;
         #10
         reset=1;
         #8
         reset=0;
+        #2000;
+        $finish;
     end
 
     always #2 clk=~clk;

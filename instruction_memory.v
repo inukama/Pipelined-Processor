@@ -58,7 +58,7 @@ module instruction_memory(
         if (reset) begin
         
         /*
-            insn_array[0] <= 16'h1010; // show  0($0)
+            insn_array[0] <= 16'hD010; // show  0($0)
             insn_array[1] <= 16'h0000; // load_switch $6
             insn_array[2] <= 16'h0000; // add   $F, $0, $0 // Start of loop
             insn_array[3] <= 16'h0000; // load  $1, 0($0)
@@ -75,22 +75,27 @@ module instruction_memory(
             insn_array[14] <= 16'hF00E;// beq   $0, $0, 15
             insn_array[15] <= 16'h0000;// nop
         */
+
+        /*
+            ADD $rs $rt $rd
+            $rd <= $rs + $rt
+        */
         
-            insn_array[0] <= 16'h1010; // load $1, 0($0)    {$1 <- 15}
-            insn_array[1] <= 16'h1021; // load $2, 1($0)    {$2 <- -1}
-            insn_array[2] <= 16'h0000; // add   $F, $0, $0 // Start of loop
-            insn_array[3] <= 16'h0000; // .
-            insn_array[4] <= 16'h0000; // .
+            insn_array[0] <= 16'hD010; // $1 <= switches
+            insn_array[1] <= 16'h1121; // $1 <= 
+            insn_array[2] <= 16'h8121; // 
+            insn_array[3] <= 16'h81FF; // .
+            insn_array[4] <= 16'hF014; // .
             insn_array[5] <= 16'h0000; // .
-            insn_array[6] <= 16'h0000; // .
-            insn_array[7] <= 16'h8133; // add   $3, $3, $1
-            insn_array[8] <= 16'h8121; // add   $1, $1, $2
-            insn_array[9] <= 16'hF016; // beq   $1, $0, 5
-            insn_array[10] <= 16'h0000; // .
-            insn_array[11] <= 16'hF00B; // beq   $0, $0, -4 // Jump to start of loop
-            insn_array[12] <= 16'h0000;// .
-            insn_array[13] <= 16'h3012;// store $1, 2($0)
-            insn_array[14] <= 16'hF00E;// beq   $0, $0, 15
+            insn_array[6] <= 16'hF00B; // .
+            insn_array[7] <= 16'h0000; // 
+            insn_array[8] <= 16'h0000; // 
+            insn_array[9] <= 16'h0000; // 
+            insn_array[10] <= 16'h0000;// .
+            insn_array[11] <= 16'h0000;//
+            insn_array[12] <= 16'h3012;// .
+            insn_array[13] <= 16'hF00E;// 
+            insn_array[14] <= 16'h0000;// beq   $0, $0, 15
             insn_array[15] <= 16'h0000;// .
 
             insn_out_reg <= 0;
